@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "magnushj.modem",
+  "name": "Modem",
+  "version": "1.0.0",
+  "author": "magnushj",
+  "license": "MIT",
+  "description": "Mobile broadband (5G/LTE) status from ModemManager in the Omarchy bar.",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "Panel.qml" },
+  "barWidget": {
+    "displayName": "Modem",
+    "description": "Signal, network type and operator for the WWAN modem, with a connection toggle.",
+    "category": "Network",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": { "refreshIntervalSec": 15 },
+    "schema": [
+      { "key": "refreshIntervalSec", "type": "integer", "label": "Refresh interval (seconds)", "min": 5, "max": 600, "step": 5, "defaultValue": 15 }
+    ]
+  }
+}
